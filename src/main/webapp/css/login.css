@@ -1,122 +1,81 @@
-/* ================================
-   全画面背景（グラデーション＆アニメーション）
-================================ */
 body {
     margin: 0;
-    height: 100vh;
-    background: linear-gradient(120deg, #4e54c8, #8f94fb);
-    background-size: 200% 200%;
-    animation: gradientMove 10s ease infinite;
+    padding: 0;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    font-family: "Yu Gothic", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Segoe UI", sans-serif;
+    height: 100vh;
 }
 
-/* 背景アニメーション */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* ================================
-   ガラスカード本体
-================================ */
-.login-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 40px;
+.container {
+    background: #fff;
+    padding: 40px 45px;
+    border-radius: 15px;
     width: 340px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     text-align: center;
 }
 
-/* ふわっと登場アニメーション */
-.animate {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.7s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* タイトル */
-.login-card h2 {
-    color: #fff;
-    margin-bottom: 30px;
-    font-size: 28px;
-}
-
-/* ================================
-   入力欄（フローティングラベル）
-================================ */
-.input-group {
-    position: relative;
+.title {
     margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px;
-    background: rgba(255,255,255,0.1);
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    color: #fff;
-    font-size: 14px;
-}
-
-/* プレースホルダは透明にして「浮かせる」 */
-.input-group input::placeholder {
-    color: transparent;
-}
-
-/* ラベル */
-.input-group label {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    color: #ddd;
-    font-size: 13px;
-    pointer-events: none;
-    transition: 0.2s;
-}
-
-/* 入力時＆フォーカス時にラベルが上に浮く */
-.input-group input:focus + label,
-.input-group input:not(:placeholder-shown) + label {
-    top: -8px;
-    left: 10px;
-    font-size: 11px;
-    color: #fff;
-}
-
-/* ================================
-   ログインボタン
-================================ */
-.login-btn {
-    width: 100%;
-    padding: 12px;
-    background: rgba(255,255,255,0.85);
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     font-size: 15px;
-    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+	box-sizing: border-box;
+}
+
+/* ログインボタン */
+.login-btn {
+    background: #0984e3;
+    color: white;
+    border: none;
 }
 
 .login-btn:hover {
-    background: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+    background: #74b9ff;
+}
+
+/* 新規登録ボタン */
+.register-btn {
+    background: #dfe6e9;
+    color: #2d3436;
+}
+
+.register-btn:hover {
+    background: #b2bec3;
 }
