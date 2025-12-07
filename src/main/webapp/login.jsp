@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
+    <title>ログイン2</title>
 </head>
 <body>
 
