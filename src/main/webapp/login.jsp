@@ -4,23 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
-    <title>ログイン2</title>
-    <title>ログイン3</title>
-    <title>ログイン4</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
-<h2>ログイン画面</h2>
+<div class="container">
+    <div class="login-card animate">
+        <h2>Welcome Back</h2>
 
-<form action="login" method="post">
-    <label>ユーザー名：</label>
-    <input type="text" name="user"><br><br>
+        <form action="LoginServlet" method="post">
 
-    <label>パスワード：</label>
-    <input type="password" name="pass"><br><br>
+            <div class="input-group">
+                <input type="text" name="username" required autocomplete="off" placeholder=" ">
+                <label>ユーザー名</label>
+            </div>
 
-    <button type="submit">ログイン</button>
-</form>
+            <div class="input-group">
+                <input type="password" name="password" required placeholder=" ">
+                <label>パスワード</label>
+            </div>
+
+            <button type="submit" class="login-btn">ログイン</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
